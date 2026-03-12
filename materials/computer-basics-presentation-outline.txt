@@ -1,0 +1,32 @@
+COMPUTER BASICS - SAMPLE PRESENTATION OUTLINE
+
+Slide 1: Title Slide
+- Course: Computer Basics
+- Topic: (Insert lesson topic)
+- Student Name
+- Date
+
+Slide 2: Learning Objectives
+- Objective 1
+- Objective 2
+- Objective 3
+
+Slide 3: Key Concepts
+- Concept A with short explanation
+- Concept B with short explanation
+- Concept C with short explanation
+
+Slide 4: Practical Demonstration
+- Steps completed
+- Tool used
+- Result achieved
+
+Slide 5: Summary
+- Main lesson takeaways
+- Skills practiced
+- Next action step
+
+Slide 6: Q&A / Reflection
+- What was easy?
+- What was challenging?
+- What will you practice next?

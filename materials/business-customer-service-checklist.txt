@@ -1,0 +1,16 @@
+CUSTOMER SERVICE CHECKLIST
+
+Daily
+[ ] Respond to customer messages
+[ ] Track unresolved issues
+[ ] Confirm order/service status
+
+Weekly
+[ ] Review customer feedback
+[ ] Identify top 3 service issues
+[ ] Set one service improvement action
+
+Monthly
+[ ] Measure customer satisfaction trend
+[ ] Train team on communication quality
+[ ] Update support process documentation

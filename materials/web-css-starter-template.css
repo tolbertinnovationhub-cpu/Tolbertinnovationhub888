@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1, h2 {
+  color: #173a77;
+}
+
+section {
+  border: 1px solid #d9e2ef;
+  border-radius: 10px;
+  padding: 12px;
+}
