@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TOEFL Full Mock Exams | Tolbert Classroom</title>
+  <meta name="description" content="Take a full TOEFL-style mock exam with timed sections for Reading, Listening, Speaking, and Writing."/>
+  <link rel="stylesheet" href="classroom.css"/>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="classroom.html"><img src="https://i.ibb.co/SXJKRq0S/Tolbert-Innovation-Logo.jpg" alt="Tolbert logo"/><span>Tolbert Classroom</span></a>
+    <nav class="nav-links" aria-label="Classroom navigation">
+      <a href="classroom.html">Classroom</a>
+      <a href="classroom-toefl.html">TOEFL Classroom</a>
+      <a href="classroom-dashboard.html">Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" class="section">
+  <div class="container">
+    <article class="card u-mb-1">
+      <p class="badge">TOEFL Mock Exam</p>
+      <h1 class="page-title">TOEFL Full Mock Exams</h1>
+      <p class="section-lead">Complete all four TOEFL sections in sequence to simulate official test conditions and assess readiness.</p>
+      <ul class="resource-list">
+        <li><strong>Total Mock Duration:</strong> approximately 120 minutes</li>
+        <li><strong>Sections:</strong> Reading, Listening, Speaking, Writing</li>
+        <li><strong>Rule:</strong> No external help, no pauses between sections unless instructed</li>
+      </ul>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Mock Exam Timer</h2>
+      <p id="practice-timer-display" class="timer-display" data-duration-minutes="120">120:00</p>
+      <div class="lesson-toolbar">
+        <button class="btn btn-secondary" id="practice-timer-start" type="button">Start</button>
+        <button class="btn btn-secondary" id="practice-timer-pause" type="button">Pause</button>
+        <button class="btn btn-primary" id="practice-timer-reset" type="button">Reset</button>
+      </div>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Section 1: Reading (Auto-Score)</h2>
+      <p class="section-lead">Recommended time: 35 minutes.</p>
+      <form id="reading-test-form" class="form-stack" data-score-type="reading">
+        <label>1) Main purpose of an academic introduction is to:
+          <select name="q1" data-correct="present-main-context">
+            <option value="">Select</option>
+            <option value="present-main-context">Present main context and argument</option>
+            <option value="share-personal-story">Share a personal story</option>
+            <option value="list-random-facts">List random facts</option>
+          </select>
+        </label>
+        <label>2) Best strategy when time is limited:
+          <select name="q2" data-correct="skim-then-scan">
+            <option value="">Select</option>
+            <option value="skim-then-scan">Skim for structure then scan for evidence</option>
+            <option value="translate-every-line">Translate every line completely</option>
+            <option value="ignore-headings">Ignore headings and topic sentences</option>
+          </select>
+        </label>
+        <label>3) In evidence-based reading, the best answer is:
+          <select name="q3" data-correct="supported-by-passage">
+            <option value="">Select</option>
+            <option value="supported-by-passage">Supported directly by the passage</option>
+            <option value="sounds-familiar">The option that sounds familiar</option>
+            <option value="longest-option">Always the longest option</option>
+          </select>
+        </label>
+        <label>4) A common trap in reading questions is:
+          <select name="q4" data-correct="similar-wording-different-meaning">
+            <option value="">Select</option>
+            <option value="similar-wording-different-meaning">Similar wording with different meaning</option>
+            <option value="clear-repeated-answer">A clearly repeated final answer only</option>
+            <option value="no-distractors">No distractors in options</option>
+          </select>
+        </label>
+        <label>5) Strong reading review after test means:
+          <select name="q5" data-correct="analyze-wrong-answers">
+            <option value="">Select</option>
+            <option value="analyze-wrong-answers">Analyze wrong answers and patterns</option>
+            <option value="only-check-total-score">Only check total score</option>
+            <option value="skip-review">Skip review entirely</option>
+          </select>
+        </label>
+        <button class="btn btn-primary" type="submit">Submit Reading Section</button>
+      </form>
+      <p id="reading-score-feedback" class="form-feedback"></p>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Section 2: Listening (Auto-Score)</h2>
+      <p class="section-lead">Recommended time: 35 minutes.</p>
+      <form id="listening-test-form" class="form-stack" data-score-type="listening">
+        <label>1) Good listening notes should capture:
+          <select name="q1" data-correct="main-ideas-and-key-details">
+            <option value="">Select</option>
+            <option value="main-ideas-and-key-details">Main ideas and key details</option>
+            <option value="every-single-word">Every single spoken word</option>
+            <option value="only-names">Only names and dates</option>
+          </select>
+        </label>
+        <label>2) If you miss one point in audio, you should:
+          <select name="q2" data-correct="move-forward">
+            <option value="">Select</option>
+            <option value="move-forward">Move forward and catch next points</option>
+            <option value="stop-listening">Stop listening and wait</option>
+            <option value="replay-recording">Replay the recording</option>
+          </select>
+        </label>
+        <label>3) Signpost words in lectures help you:
+          <select name="q3" data-correct="track-structure">
+            <option value="">Select</option>
+            <option value="track-structure">Track lecture structure and transitions</option>
+            <option value="ignore-organization">Ignore organization</option>
+            <option value="skip-note-taking">Skip note-taking</option>
+          </select>
+        </label>
+        <label>4) Best post-listening step is to:
+          <select name="q4" data-correct="check-errors-and-keywords">
+            <option value="">Select</option>
+            <option value="check-errors-and-keywords">Check errors and missed keywords</option>
+            <option value="guess-without-review">Guess without review</option>
+            <option value="avoid-reflection">Avoid reflection</option>
+          </select>
+        </label>
+        <label>5) TOEFL listening improvement mainly comes from:
+          <select name="q5" data-correct="timed-practice-and-review">
+            <option value="">Select</option>
+            <option value="timed-practice-and-review">Timed practice plus detailed review</option>
+            <option value="one-practice-monthly">One practice monthly</option>
+            <option value="passive-hearing-only">Passive hearing only</option>
+          </select>
+        </label>
+        <button class="btn btn-primary" type="submit">Submit Listening Section</button>
+      </form>
+      <p id="listening-score-feedback" class="form-feedback"></p>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Section 3: Speaking (Timed Response Practice)</h2>
+      <p class="section-lead">Recommended time: 20 minutes.</p>
+      <ul class="resource-list">
+        <li><strong>Task 1 (Independent):</strong> Do you prefer studying in the morning or at night? Give reasons.</li>
+        <li><strong>Task 2 (Integrated):</strong> Read a short academic paragraph, listen to a short explanation, then summarize key points.</li>
+        <li><strong>Task 3:</strong> Explain one challenge students face in online learning and one solution.</li>
+        <li><strong>Task 4:</strong> Summarize a short lecture idea using clear structure.</li>
+      </ul>
+      <div class="lesson-toolbar u-mt-1">
+        <button class="btn btn-secondary" id="record-start-btn" type="button">Start Recording</button>
+        <button class="btn btn-primary" id="record-stop-btn" type="button" disabled>Stop Recording</button>
+      </div>
+      <p id="recording-status" class="form-feedback"></p>
+      <audio id="recording-playback" class="audio-playback" controls></audio>
+      <a id="recording-download" class="btn btn-outline-inline u-mt-06" href="#" download="toefl-speaking-response.webm" style="display:none;">Download Recording</a>
+      <label class="u-mt-1">Or upload an existing speaking file
+        <input id="speaking-upload-input" type="file" accept="audio/*"/>
+      </label>
+      <p id="speaking-upload-status" class="form-feedback"></p>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Section 4: Writing Submission</h2>
+      <p class="section-lead">Recommended time: 30 minutes.</p>
+      <form id="writing-feedback-form" class="form-stack">
+        <label>Integrated Writing (Summarize source + lecture)
+          <textarea name="integrated-writing" rows="7" placeholder="Write your integrated response here..." required></textarea>
+        </label>
+        <label>Independent Writing (Opinion Essay)
+          <textarea name="independent-writing" rows="7" placeholder="Write your independent response here..." required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Submit Writing Section</button>
+      </form>
+      <p id="writing-feedback-status" class="form-feedback"></p>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>Post-Mock Reflection & Final Submission</h2>
+      <p>Record your full mock result summary and action plan before marking complete.</p>
+      <label>Reflection / Submission Notes
+        <textarea rows="6" id="module-reflection-text" placeholder="Include section scores, weak areas, and your 7-day correction plan..."></textarea>
+      </label>
+      <div class="lesson-toolbar u-mt-06">
+        <button class="btn btn-secondary" type="button" id="module-reflection-save">Save Reflection</button>
+      </div>
+      <p class="form-feedback" id="module-reflection-feedback"></p>
+      <div class="form-stack" data-module-checklist>
+        <label><input type="checkbox" data-complete-item/> I completed Reading and Listening sections.</label>
+        <label><input type="checkbox" data-complete-item/> I completed Speaking and Writing sections.</label>
+        <label><input type="checkbox" data-complete-item/> I saved my reflection and correction plan.</label>
+      </div>
+      <div class="lesson-toolbar u-mt-1">
+        <button class="btn btn-primary" type="button" data-mark-module-complete>Mark Mock Complete</button>
+      </div>
+      <p class="form-feedback" data-module-feedback></p>
+    </article>
+
+    <article class="card u-mb-1">
+      <h2>After Mock Exam</h2>
+      <p class="section-lead">When your mock is complete, submit your certificate request and payment reference for processing.</p>
+      <div class="lesson-toolbar">
+        <a class="btn btn-primary" href="classroom-toefl-certificate-request.html">Request TOEFL Certificate →</a>
+      </div>
+    </article>
+
+    <div class="lesson-toolbar module-pagination">
+      <a class="btn btn-secondary" href="classroom-toefl.html">← Back to TOEFL Classroom</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer"><div class="container footer-grid"><div><p><strong>TOEFL Full Mock Exam</strong></p><p>Complete all sections under timed conditions.</p></div><div><p><a href="classroom-toefl.html">TOEFL Classroom</a></p></div><div><p><a href="classroom-toefl-certificate-request.html">Certificate Request</a></p></div></div><p class="copyright-note">© 2026 Tolbert Innovation Hub. All rights reserved.</p></footer>
+<script>
+  (function () {
+    const reflectionInput = document.getElementById('module-reflection-text');
+    const saveButton = document.getElementById('module-reflection-save');
+    const saveFeedback = document.getElementById('module-reflection-feedback');
+    const checklistItems = Array.from(document.querySelectorAll('[data-complete-item]'));
+    const completeButton = document.querySelector('[data-mark-module-complete]');
+    const completeFeedback = document.querySelector('[data-module-feedback]');
+
+    const reflectionKey = 'toefl_full_mock_reflection';
+    const completeKey = 'toefl_full_mock_complete';
+
+    if (reflectionInput) {
+      reflectionInput.value = localStorage.getItem(reflectionKey) || '';
+    }
+
+    saveButton?.addEventListener('click', () => {
+      const value = String(reflectionInput?.value || '').trim();
+      localStorage.setItem(reflectionKey, value);
+      if (saveFeedback) saveFeedback.textContent = 'Saved ✅';
+    });
+
+    if (localStorage.getItem(completeKey) === 'true' && completeButton) {
+      completeButton.textContent = 'Completed ✓';
+    }
+
+    completeButton?.addEventListener('click', () => {
+      const allChecked = checklistItems.length > 0 && checklistItems.every((item) => item.checked);
+      if (!allChecked) {
+        if (completeFeedback) completeFeedback.textContent = 'Complete all checklist items before marking mock complete.';
+        return;
+      }
+
+      if (!String(reflectionInput?.value || '').trim()) {
+        if (completeFeedback) completeFeedback.textContent = 'Save your reflection notes before marking mock complete.';
+        return;
+      }
+
+      localStorage.setItem(completeKey, 'true');
+      completeButton.textContent = 'Completed ✓';
+      if (completeFeedback) completeFeedback.textContent = 'TOEFL full mock marked complete. Proceed to certificate request if eligible.';
+    });
+  })();
+</script>
+<script src="classroom.js"></script>
+</body>
+</html>
