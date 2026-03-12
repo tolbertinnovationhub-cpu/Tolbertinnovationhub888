@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Fundamentals | Tolbert Learning Hub</title>
+  <meta name="description" content="Programming Fundamentals course covering problem solving, coding basics, debugging, and algorithmic thinking." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Tolbert Innovation Hub</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" aria-current="page" href="learning/">Learning Hub</a>
+        <a href="classroom.html">Classroom</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="container">
+      <p class="section-label">Learning Flow</p>
+      <h1 class="page-title">Programming Fundamentals - Start Learning</h1>
+
+      <div class="learning-flow-wrap">
+        <aside class="card learning-flow-nav" aria-label="Course content navigation">
+          <h2>Course Content</h2>
+
+          <h3>Module 1 - Programming Concepts and Logic</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Introduction to Programming ✓</li>
+            <li>Lesson 2: Variables and Data Types ✓</li>
+            <li>Lesson 3: Operators and Expressions ✓</li>
+            <li>Lesson 4: Problem Solving Basics ✓</li>
+            <li>Module 1 Quiz (100%) ✓</li>
+          </ul>
+
+          <h3>Module 2 - Control Flow and Functions</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Conditional Statements ✓</li>
+            <li>Lesson 2: Loops and Iteration ✓</li>
+            <li>Lesson 3: Functions and Parameters ✓</li>
+            <li>Lesson 4: Function Practice ✓</li>
+            <li>Module 2 Quiz</li>
+          </ul>
+
+          <h3>Module 3 - Debugging, Testing, and Code Quality</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Finding and Fixing Bugs</li>
+            <li>Lesson 2: Testing Fundamentals</li>
+            <li>Lesson 3: Code Readability</li>
+            <li>Lesson 4: Refactoring Basics</li>
+            <li>Module 3 Quiz</li>
+          </ul>
+
+          <h3>Module 4 - Data Structures and Algorithms Basics</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Arrays and Lists</li>
+            <li>Lesson 2: Searching and Sorting</li>
+            <li>Lesson 3: Complexity Overview</li>
+            <li>Lesson 4: Final Practice</li>
+            <li>Final Quiz</li>
+          </ul>
+
+          <section class="learning-score-history">
+            <div class="learning-score-row">
+              <h3>Quiz Scores</h3>
+              <button type="button" class="btn btn-outline btn-compact" id="clear-score-history-btn-programming">Clear Quiz History</button>
+            </div>
+            <ul class="list-tight" id="quiz-history-list-programming">
+              <li><strong>Module 1 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Latest 100%</li>
+              <li>Attempt 1: 100% (3/11/2026, 7:06:33 AM)</li>
+              <li><strong>Module 2 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+              <li><strong>Module 3 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+              <li><strong>Final Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+            </ul>
+          </section>
+        </aside>
+
+        <section class="card learning-flow-content" aria-live="polite">
+          <p class="section-label">Course Progress</p>
+          <p class="form-note" id="progress-text-programming">⬛⬛⬜⬜⬜ 40% Complete</p>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+            <div class="progress-fill" id="progress-fill-programming" style="width:40%"></div>
+          </div>
+
+          <section class="card learning-block">
+            <h2>Learning Context</h2>
+            <p>Best for beginner-to-intermediate programmers preparing for software projects, coding interviews, and technical problem solving.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="lessons/programming-fundamentals/start-learning/">Start Learning</a>
+              <a class="btn btn-secondary" href="courses.html">Back to Courses</a>
+              <button type="button" class="btn btn-outline" id="reset-progress-btn-programming">Reset Progress</button>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright-note">© 2026 Tolbert Innovation Hub. All rights reserved.</p>
+  </footer>
+  <script>
+    (function () {
+      const progressKey = 'learningFlow:programming-fundamentals:progress';
+      const fill = document.getElementById('progress-fill-programming');
+      const text = document.getElementById('progress-text-programming');
+      const resetBtn = document.getElementById('reset-progress-btn-programming');
+      const clearBtn = document.getElementById('clear-score-history-btn-programming');
+      const historyList = document.getElementById('quiz-history-list-programming');
+
+      const saved = Number(localStorage.getItem(progressKey));
+      const progress = Number.isFinite(saved) && saved >= 0 && saved <= 100 ? saved : 40;
+      if (fill) fill.style.width = `${progress}%`;
+      if (text) text.textContent = `⬛⬛⬜⬜⬜ ${progress}% Complete`;
+
+      resetBtn?.addEventListener('click', () => {
+        localStorage.setItem(progressKey, '0');
+        if (fill) fill.style.width = '0%';
+        if (text) text.textContent = '⬜⬜⬜⬜⬜ 0% Complete';
+      });
+
+      clearBtn?.addEventListener('click', () => {
+        if (!historyList) return;
+        historyList.innerHTML = '<li><strong>Module 1 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Module 2 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Module 3 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Final Quiz:</strong></li><li>Clear</li><li>Not attempted</li>';
+      });
+    })();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
