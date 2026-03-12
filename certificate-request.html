@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificate Request | Tolbert Learning Hub</title>
+  <meta name="description" content="Request your Tolbert Innovation Hub learning certificate after course completion and final test pass." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Tolbert Innovation Hub</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" aria-current="page" href="learning/">Learning Hub</a>
+        <a href="classroom.html">Classroom</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="container portal-wrap">
+      <p class="section-label">Certificate System</p>
+      <h1 class="page-title">Request Certificate ($5)</h1>
+      <p>Complete all lessons and pass the final test to receive a certificate from Tolbert Innovation Hub.</p>
+
+      <form class="card form-card scholarship-form" data-success-message="Certificate request submitted. Our team will contact you by email for delivery or office pickup.">
+        <div class="form-grid">
+          <label>
+            Full Name
+            <input type="text" name="fullName" required />
+          </label>
+          <label>
+            Email Address
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone" required />
+          </label>
+          <label>
+            Course Completed
+            <select name="course" required>
+              <option value="">Select course</option>
+              <option>IELTS Preparation</option>
+              <option>TOEFL Preparation</option>
+              <option>Scholarship Application Training</option>
+              <option>Website Development</option>
+              <option>Computer Basics</option>
+              <option>Business Startup Training</option>
+            </select>
+          </label>
+          <label class="full">
+            Preferred Delivery Method
+            <select name="deliveryMethod" required>
+              <option value="">Select option</option>
+              <option>Email</option>
+              <option>Office pickup</option>
+            </select>
+          </label>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Certificate Request</button>
+        <p class="form-note">Certificate fee: $5</p>
+        <p class="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright-note">© 2026 Tolbert Innovation Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
