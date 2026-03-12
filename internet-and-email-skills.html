@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internet and Email Skills | Tolbert Learning Hub</title>
+  <meta name="description" content="Internet and Email Skills course covering safe browsing, professional email communication, and online collaboration." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Tolbert Innovation Hub</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a class="active" aria-current="page" href="learning/">Learning Hub</a>
+        <a href="classroom.html">Classroom</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section">
+    <div class="container">
+      <p class="section-label">Learning Flow</p>
+      <h1 class="page-title">Internet and Email Skills - Start Learning</h1>
+
+      <div class="learning-flow-wrap">
+        <aside class="card learning-flow-nav" aria-label="Course content navigation">
+          <h2>Course Content</h2>
+
+          <h3>Module 1 - Internet Navigation and Search Skills</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Internet Basics ✓</li>
+            <li>Lesson 2: Browsers and Tabs ✓</li>
+            <li>Lesson 3: Smart Search Techniques ✓</li>
+            <li>Lesson 4: Evaluating Sources ✓</li>
+            <li>Module 1 Quiz (100%) ✓</li>
+          </ul>
+
+          <h3>Module 2 - Professional Email Writing and Attachments</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Email Account Setup ✓</li>
+            <li>Lesson 2: Professional Subject Lines ✓</li>
+            <li>Lesson 3: Attachments and File Safety ✓</li>
+            <li>Lesson 4: Reply and Follow-up Etiquette ✓</li>
+            <li>Module 2 Quiz</li>
+          </ul>
+
+          <h3>Module 3 - Password Security and Scam Awareness</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Password Best Practices</li>
+            <li>Lesson 2: Scam and Phishing Detection</li>
+            <li>Lesson 3: Safe Account Management</li>
+            <li>Lesson 4: Security Routine</li>
+            <li>Module 3 Quiz</li>
+          </ul>
+
+          <h3>Module 4 - Online Meetings and Cloud Collaboration</h3>
+          <ul class="list-tight learning-nav-list">
+            <li>Lesson 1: Meeting Platforms</li>
+            <li>Lesson 2: Virtual Communication Rules</li>
+            <li>Lesson 3: File Sharing in the Cloud</li>
+            <li>Lesson 4: Collaboration Workflow</li>
+            <li>Final Quiz</li>
+          </ul>
+
+          <section class="learning-score-history">
+            <div class="learning-score-row">
+              <h3>Quiz Scores</h3>
+              <button type="button" class="btn btn-outline btn-compact" id="clear-score-history-btn-internet">Clear Quiz History</button>
+            </div>
+            <ul class="list-tight" id="quiz-history-list-internet">
+              <li><strong>Module 1 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Latest 100%</li>
+              <li>Attempt 1: 100% (3/11/2026, 7:06:33 AM)</li>
+              <li><strong>Module 2 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+              <li><strong>Module 3 Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+              <li><strong>Final Quiz:</strong></li>
+              <li>Clear</li>
+              <li>Not attempted</li>
+            </ul>
+          </section>
+        </aside>
+
+        <section class="card learning-flow-content" aria-live="polite">
+          <p class="section-label">Course Progress</p>
+          <p class="form-note" id="progress-text-internet">⬛⬛⬜⬜⬜ 40% Complete</p>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40">
+            <div class="progress-fill" id="progress-fill-internet" style="width:40%"></div>
+          </div>
+
+          <section class="card learning-block">
+            <h2>Learning Context</h2>
+            <p>Ideal for learners and professionals who need practical online communication and safe internet behavior in everyday tasks.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="lessons/internet-and-email-skills/start-learning/">Start Learning</a>
+              <a class="btn btn-secondary" href="courses.html">Back to Courses</a>
+              <button type="button" class="btn btn-outline" id="reset-progress-btn-internet">Reset Progress</button>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="copyright-note">© 2026 Tolbert Innovation Hub. All rights reserved.</p>
+  </footer>
+  <script>
+    (function () {
+      const progressKey = 'learningFlow:internet-and-email-skills:progress';
+      const fill = document.getElementById('progress-fill-internet');
+      const text = document.getElementById('progress-text-internet');
+      const resetBtn = document.getElementById('reset-progress-btn-internet');
+      const clearBtn = document.getElementById('clear-score-history-btn-internet');
+      const historyList = document.getElementById('quiz-history-list-internet');
+
+      const saved = Number(localStorage.getItem(progressKey));
+      const progress = Number.isFinite(saved) && saved >= 0 && saved <= 100 ? saved : 40;
+      if (fill) fill.style.width = `${progress}%`;
+      if (text) text.textContent = `⬛⬛⬜⬜⬜ ${progress}% Complete`;
+
+      resetBtn?.addEventListener('click', () => {
+        localStorage.setItem(progressKey, '0');
+        if (fill) fill.style.width = '0%';
+        if (text) text.textContent = '⬜⬜⬜⬜⬜ 0% Complete';
+      });
+
+      clearBtn?.addEventListener('click', () => {
+        if (!historyList) return;
+        historyList.innerHTML = '<li><strong>Module 1 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Module 2 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Module 3 Quiz:</strong></li><li>Clear</li><li>Not attempted</li><li><strong>Final Quiz:</strong></li><li>Clear</li><li>Not attempted</li>';
+      });
+    })();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
